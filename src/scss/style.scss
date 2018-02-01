@@ -1,0 +1,199 @@
+$bg-color: rgb(32, 33, 35);
+$font-color: rgb(255, 255, 255);
+$bg-color-show-menu: rgb(61, 61, 61);
+$padding-top-bottom-description: 2em;
+$margin-top-bottom-description: 75px;
+$bg-color-description: rgb(226, 36, 74);
+$font-size-description: 1.2em;
+$font-size-rwd: 1em;
+$navbar-padding: 2em 1.1em;
+p{
+    margin: 0 !important;
+}
+a {
+    text-decoration: none !important;
+    color: aqua !important;
+}
+
+body,html{
+    overflow-x: hidden;
+}
+@media screen and (min-width: 1000px) {
+    p {
+        font-size: $font-size-rwd;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .dish-description {
+        padding-right: 0;
+    }
+}
+.bar-menu{
+    display: none;
+    color: $font-color;
+}
+.custom-navbar {
+    background: $bg-color;
+    .nav-item{
+        padding: $navbar-padding;
+    }
+    a {
+        font-size: 1.5em; 
+        color: $font-color !important;
+        font-variant: small-caps;
+    }
+    @media screen and (max-width: 1000px) {
+        .nav-item{
+            display: none;
+        }
+        .bar-menu{
+            display: block !important;
+        }  
+    }
+}
+@media screen and (max-width: 1000px) {
+    .slider-inner{
+        img{
+            top: 65px !important;
+        }
+    }
+}
+.list-group{
+    padding-top: 2px;
+    padding-bottom: 40px;
+}
+.show-menu{
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    font-size: $font-size-rwd;
+    width: 100% !important;
+    background: $bg-color-show-menu - 20;
+    a {
+        background: $bg-color-show-menu;  
+        font-variant: small-caps;
+        text-align: center;
+        margin-bottom: 0px;
+        border-bottom-color: aliceblue;
+    }
+    .list-group-item:last-child{
+        border-bottom: 1px solid white !important;
+    }
+    a:hover{
+        background: $font-color !important;
+        color: ($bg-color-show-menu + 20) !important;
+        cursor: pointer;
+    }
+}
+
+.slider-inner {
+    max-width: 1400px;
+    min-width: 300px;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    img {
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 130px;
+        left: 2000px;
+    }
+    img:last-child{
+        .nie{
+            display: none !important;
+        }
+    }
+    .active{
+        left: 0;
+    }
+}
+.nie {
+    display: none;
+}
+.description {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: $font-size-description !important;
+    color: $font-color;
+    text-align: center;
+    font-variant: small-caps;
+    padding-top: $padding-top-bottom-description;
+    padding-bottom: $padding-top-bottom-description;
+    margin-top: $margin-top-bottom-description;
+    margin-bottom: $margin-top-bottom-description;
+    background: $bg-color-description;
+    @media screen and (max-width: 500px) {
+        font-size: $font-size-rwd !important;
+    }
+}
+
+.dishes{
+    .row {
+        padding: $padding-top-bottom-description;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    h5 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        @media screen and (min-width: 750px) {
+            margin-top: 30px;
+        }
+    }
+    
+}
+
+.dish-description {
+    padding: 1rem;
+    display: flex;
+    align-content: center;
+    text-align: justify;
+}
+
+.dish-image {
+    padding: $padding-top-bottom-description;
+}
+
+%down {
+    width: 100%;
+    background: $bg-color;
+}
+
+footer{
+    @extend %down;
+    margin-top: $margin-top-bottom-description;
+    padding: $padding-top-bottom-description*2;
+    font-size: $font-size-description;
+    color: $font-color;
+    @media screen and (max-width: 500px) {
+        padding-left: 0px !important;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: $font-size-rwd !important;
+    }
+    address,.friends{
+        min-height: 150px !important;
+        height: auto;
+        padding-left: 4em;
+    }
+}
+.created-by {
+    @extend %down;
+    border-top: 1px solid black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 2em;
+    color: rgb(252, 227, 0);
+}
+
+
